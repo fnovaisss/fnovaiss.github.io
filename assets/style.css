@@ -1,0 +1,44 @@
+:root{
+  --bg:#05060f;
+  --bg2:#0b0f2a;
+  --card:#0b1026cc;
+  --text:#eaf2ff;
+  --muted:#8fa3ff;
+  --accent:#00e5ff;
+  --accent2:#7c5cff;
+  --shadow:0 0 30px rgba(0,229,255,.2);
+  --radius:18px;
+  --max:1100px;
+}
+
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui;
+  color:var(--text);
+
+  background:
+    radial-gradient(900px 500px at 20% 0%, rgba(0,229,255,.18), transparent 60%),
+    radial-gradient(800px 400px at 80% 30%, rgba(124,92,255,.18), transparent 60%),
+    linear-gradient(180deg, #05060f, #0b0f2a);
+}
+
+.container{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+.nav{
+  backdrop-filter:blur(14px);
+  background:rgba(5,6,15,.7);
+}
+
+.card{
+  background:rgba(11,16,38,.85);
+  border:1px solid rgba(0,229,255,.2);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:0 0 25px rgba(0,229,255,.15);
+}
+
+/* brilho nos botões */
+.btn{
+  background:linear-gradient(135deg, #00e5ff, #7c5cff);
+  box-shadow:0 0 15px rgba(0,229,255,.4);
+}
