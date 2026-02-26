@@ -30,7 +30,6 @@
   </header>
 
   <main id="top">
-    <!-- HERO SECTION -->
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__content">
@@ -102,16 +101,17 @@
           </div>
         </aside>
       </div>
+
       <div class="hero__bg" aria-hidden="true"></div>
     </section>
 
-    <!-- SOBRE -->
     <section id="sobre" class="section">
       <div class="container">
         <div class="section__head">
           <h2>Sobre</h2>
           <p>Tecnologia + Engenharia para transformar demandas em soluções eficientes.</p>
         </div>
+
         <div class="grid grid--2">
           <div class="card">
             <h3>Quem eu sou</h3>
@@ -121,7 +121,12 @@
               Já <strong>Sistemas de Informação</strong> amplia minha capacidade técnica para integrar sistemas,
               tratar dados e entregar soluções confiáveis.
             </p>
+            <p>
+              Busco oportunidades em <strong>TI</strong>, <strong>Engenharia</strong> e <strong>Dados/BI</strong>,
+              em qualquer segmento onde eu possa aplicar meus conhecimentos para otimizar rotinas e apoiar decisões.
+            </p>
           </div>
+
           <div class="card">
             <h3>Principais atuações</h3>
             <div class="tags">
@@ -140,12 +145,12 @@
       </div>
     </section>
 
-    <!-- EXPERIÊNCIA -->
     <section id="experiencia" class="section section--alt">
       <div class="container">
         <div class="section__head">
           <h2>Experiências</h2>
         </div>
+
         <div class="timeline">
           <article class="timeline__item">
             <div class="timeline__dot"></div>
@@ -155,12 +160,14 @@
                 <p class="muted">Liga Álvaro Contra a Mortalidade Infantil • 2024 – atual</p>
               </header>
               <ul class="list">
-                <li>Implantação e suporte ao <strong>Tasy</strong> (Farmácia e Suprimentos)</li>
-                <li>Criação de relatórios e consultas complexas com <strong>Oracle SQL</strong></li>
+                <li>Implantação, parametrização e suporte ao <strong>Tasy</strong></li>
+                <li>Atuação nos módulos de <strong>Farmácia</strong> e <strong>Suprimentos</strong></li>
+                <li>Criação de relatórios/consultas com <strong>Oracle SQL</strong></li>
                 <li>Mapeamento de fluxos e suporte ao <strong>RM WEB</strong></li>
               </ul>
             </div>
           </article>
+
           <article class="timeline__item">
             <div class="timeline__dot"></div>
             <div class="timeline__content">
@@ -169,8 +176,9 @@
                 <p class="muted">Hapvida • 2021 – 2024</p>
               </header>
               <ul class="list">
-                <li>Suporte N1/N2 com foco em SLAs via ServiceNow</li>
-                <li>Infraestrutura de redes (Fortigate, Velocloud) e sistemas hospitalares</li>
+                <li>Suporte <strong>N1/N2</strong> com SLAs (ServiceNow)</li>
+                <li>Configuração e suporte: <strong>Fortigate</strong>, <strong>Velocloud</strong>, redes</li>
+                <li>Atendimento ao usuário em ambiente crítico e de alta disponibilidade</li>
               </ul>
             </div>
           </article>
@@ -178,12 +186,53 @@
       </div>
     </section>
 
-    <!-- PROJETOS (ATUALIZADO) -->
-    <section id="projetos" class="section">
+    <section id="habilidades" class="section">
       <div class="container">
         <div class="section__head">
-          <h2>Projetos em Destaque</h2>
-          <p>Soluções técnicas aplicadas em ambientes hospitalares e de gestão.</p>
+          <h2>Habilidades</h2>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card">
+            <h3>Dados & Relatórios</h3>
+            <div class="tags">
+              <span class="tag">Oracle SQL</span>
+              <span class="tag">Consultas/Views</span>
+              <span class="tag">Indicadores</span>
+              <span class="tag">Power BI (base)</span>
+              <span class="tag">Python (base)</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Sistemas</h3>
+            <div class="tags">
+              <span class="tag">Tasy</span>
+              <span class="tag">Farmácia</span>
+              <span class="tag">Suprimentos</span>
+              <span class="tag">RM WEB</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Suporte & Infra</h3>
+            <div class="tags">
+              <span class="tag">ServiceNow</span>
+              <span class="tag">GLPI</span>
+              <span class="tag">SLA</span>
+              <span class="tag">Redes</span>
+              <span class="tag">Fortigate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>Projetos Técnicos</h2>
+          <p>Soluções desenvolvidas para otimização de processos hospitalares e gestão de dados.</p>
         </div>
 
         <div class="grid grid--1">
@@ -191,70 +240,65 @@
           <!-- PROJETO 1 -->
           <article class="card project-long">
             <div class="project-long__header">
-              <span class="tag tag--accent">Tasy EMR • Oracle SQL</span>
-              <h3>Extração de Biblioteca de Fármacos (Bombas de Infusão)</h3>
+              <span class="tag tag--accent">Tasy EMR • SQL • Farmácia</span>
+              <h3>Extração de Biblioteca de Fármacos para Bombas de Infusão</h3>
             </div>
             <div class="project-long__content">
-              <p><strong>O que é:</strong> Desenvolvimento de consulta SQL avançada para extração de dados técnicos (doses, diluições e estabilidades) para configuração das novas bombas B Braun no HMG.</p>
-              <p><strong>Desafio:</strong> Fragmentação de dados em +9 tabelas e inconsistências entre cadastros de materiais e prescrição.</p>
-              <p><strong>Solução:</strong> Implementação de <code>LEFT JOINs</code> complexos, lógica de contingência com <code>NVL</code>/<code>NULLIF</code> e normalização de siglas técnicas via <code>DECODE</code> para leitura assistencial.</p>
-              <p><strong>Impacto:</strong> Redução drástica de erros de medicação por parametrização exata e economia de dezenas de horas de trabalho manual da Engenharia Clínica.</p>
+              <p><strong>O Problema:</strong> Dados de medicamentos (doses, estabilidades) fragmentados em +9 tabelas e siglas internas ilegíveis, dificultando a configuração de novas bombas B Braun.</p>
+              <p><strong>A Solução:</strong> Consulta SQL avançada com múltiplos <code>LEFT JOINs</code>, uso de <code>NVL/NULLIF</code> para criar hierarquia de busca (fallback) e normalização de termos técnicos com <code>DECODE</code>.</p>
+              <p><strong>Impacto:</strong> Segurança do paciente garantida pela precisão dos dados e drástica redução do retrabalho manual das equipes de Farmácia e Engenharia Clínica.</p>
             </div>
           </article>
 
           <!-- PROJETO 2 -->
           <article class="card project-long">
             <div class="project-long__header">
-              <span class="tag tag--accent">Regras de Negócio • Logística</span>
+              <span class="tag tag--accent">Regras de Negócio • Finanças</span>
               <h3>Customização de Controle de Requisição de Materiais</h3>
             </div>
             <div class="project-long__content">
-              <p><strong>O que é:</strong> Implementação de trava lógica no Tasy para condicionar obrigatoriedade de campos conforme a operação logística.</p>
-              <p><strong>Desafio:</strong> Itens de "Consumo Paciente" saíam do estoque sem vínculo de atendimento, gerando prejuízo financeiro e quebra de rastreabilidade.</p>
-              <p><strong>Solução:</strong> Criação de Regra de Atributo no campo <code>NR_ATENDIMENTO</code> via script SQL, validando a operação em tempo real.</p>
-              <p><strong>Impacto:</strong> Garantia de receita (100% dos itens cobrados) e integridade total dos dados de inventário.</p>
+              <p><strong>O Problema:</strong> Materiais eram retirados do estoque como "Consumo Paciente" sem vínculo com o atendimento, gerando prejuízos financeiros e falha na rastreabilidade.</p>
+              <p><strong>A Solução:</strong> Implementação de script SQL no dicionário de dados do Tasy para criar uma <strong>Regra de Atributo</strong>, tornando o vínculo de atendimento obrigatório apenas em operações de consumo.</p>
+              <p><strong>Impacto:</strong> Garantia de receita e 100% de rastreabilidade, eliminando a busca manual por requisições não faturadas.</p>
             </div>
           </article>
 
           <!-- PROJETO 3 -->
           <article class="card project-long">
             <div class="project-long__header">
-              <span class="tag tag--accent">BI • Hemoterapia</span>
+              <span class="tag tag--accent">BI • Hemoterapia • SLA</span>
               <h3>Relatório de Eficiência e SLA Transfusional</h3>
             </div>
             <div class="project-long__content">
-              <p><strong>O que é:</strong> Dashboard analítico para monitorar o ciclo de vida da transfusão (Solicitação -> Coleta -> Liberação -> Beira-leito).</p>
-              <p><strong>Desafio:</strong> Dados dispersos entre módulos médico, laboratório e enfermagem, dificultando a visão de gargalos.</p>
-              <p><strong>Solução:</strong> Query SQL com cálculos de tempo real, tratamento de nulos e tradução de domínios (IDs para nomes amigáveis).</p>
-              <p><strong>Impacto:</strong> Identificação precisa de gargalos logísticos, maior segurança do paciente em casos de emergência e conformidade para acreditações ONA/JCI.</p>
+              <p><strong>O Problema:</strong> Dificuldade em rastrear o tempo de atendimento entre a solicitação médica e o início da transfusão devido a dados dispersos em diferentes módulos.</p>
+              <p><strong>A Solução:</strong> Query analítica consolidando dados de reserva, amostras e administração à beira-leito. Uso de <code>CASE WHEN</code> para tradução de prioridades e cálculos automáticos de tempo de resposta.</p>
+              <p><strong>Impacto:</strong> Identificação clara de gargalos logísticos e conformidade com protocolos críticos de segurança (ONA/JCI).</p>
             </div>
           </article>
 
           <!-- PROJETO 4 -->
           <article class="card project-long">
             <div class="project-long__header">
-              <span class="tag tag--accent">Zebra EPL • Farmácia</span>
+              <span class="tag tag--accent">SQL • Zebra EPL • Logística</span>
               <h3>Otimização de Etiquetas de Dispensação por Lote</h3>
             </div>
             <div class="project-long__content">
-              <p><strong>O que é:</strong> Melhoria das etiquetas térmicas para incluir informações clínicas e garantir leitura de scanners.</p>
-              <p><strong>Desafio:</strong> Falta de horários de administração na etiqueta e sobreposição de textos que impediam a leitura do código de barras.</p>
-              <p><strong>Solução:</strong> SQL dinâmico com <code>LISTAGG</code> para agrupar horários e reprogramação em linguagem <code>EPL (Zebra)</code> para otimizar o layout físico.</p>
-              <p><strong>Impacto:</strong> Aumento de 100% na taxa de leitura dos códigos de barras e redução de erros na beira-leito.</p>
+              <p><strong>O Problema:</strong> Etiquetas com informações limitadas e layouts que impossibilitavam a leitura correta de códigos de barras pelos scanners.</p>
+              <p><strong>A Solução:</strong> Uso de <code>LISTAGG</code> para agrupar horários de administração e reprogramação completa do layout em linguagem <strong>EPL (Zebra)</strong>, redimensionando elementos para máxima legibilidade.</p>
+              <p><strong>Impacto:</strong> Aumento de 100% na taxa de leitura dos scanners e maior segurança na administração de medicamentos pela Enfermagem.</p>
             </div>
           </article>
 
           <!-- PROJETO 5 -->
           <article class="card project-long">
             <div class="project-long__header">
-              <span class="tag tag--accent">Custos • Tasy Reports</span>
-              <h3>Otimização de Relatório de Dispensação (CATE1011)</h3>
+              <span class="tag tag--accent">Redução de Custos • Tasy Reports</span>
+              <h3>Otimização de Relatório de Dispensação Farmacêutica</h3>
             </div>
             <div class="project-long__content">
-              <p><strong>O que é:</strong> Reestruturação do relatório de atendimento de prescrição para reduzir desperdícios.</p>
-              <p><strong>Desafio:</strong> Impressão de 1 folha por lote (gerando alto custo de papel) e ausência de códigos de barras individuais.</p>
-              <p><strong>Solução:</strong> Agrupamento lógico por atendimento via SQL, inclusão de <code>CODE128_C</code> na banda de detalhes e redesenho de layout no gerador Tasy.</p>
-              <p><strong>Impacto:</strong> Redução estimada de 60% no consumo de papel/toner e maior agilidade na conferência pela enfermagem.</p>
+              <p><strong>O Problema:</strong> Alto desperdício de papel (1 folha por lote) e falta de rastreabilidade individual por linha de medicamento no relatório padrão.</p>
+              <p><strong>A Solução:</strong> Reestruturação da query para agrupamento por atendimento, inserção de componentes de código de barras <code>CODE128_C</code> na banda de detalhes e otimização do layout visual.</p>
+              <p><strong>Impacto:</strong> Redução estimada de 60% no consumo de papel/toner e agilidade operacional na bipagem à beira-leito.</p>
             </div>
           </article>
 
@@ -262,32 +306,39 @@
       </div>
     </section>
 
-    <!-- CONTATO -->
-    <section id="contato" class="section section--alt">
+    <section id="contato" class="section">
       <div class="container">
         <div class="section__head">
           <h2>Contato</h2>
         </div>
+
         <div class="grid grid--2">
           <div class="card">
             <h3>Canais</h3>
             <div class="contact-actions">
               <a class="btn" target="_blank" rel="noreferrer"
-                 href="https://wa.me/5575999864133?text=Olá%20Flavio!">WhatsApp</a>
+                 href="https://wa.me/5575999864133?text=Olá%20Flavio!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar.">
+                WhatsApp
+              </a>
               <a class="btn btn--ghost" target="_blank" rel="noreferrer"
-                 href="https://www.linkedin.com/in/flavio-novais-47605240/">LinkedIn</a>
+                 href="https://www.linkedin.com/in/flavio-novais-47605240/">
+                LinkedIn
+              </a>
               <a class="btn btn--ghost" href="#" id="emailBtn2">E-mail</a>
             </div>
+            <p class="muted tiny" style="margin-top:20px">Telefones: (75) 99986-4133 / (75) 98331-9992</p>
           </div>
+
           <div class="card">
-            <h3>O que eu procuro</h3>
+            <h3>Foco de Carreira</h3>
             <ul class="list">
-              <li>Vagas em <strong>Sistemas/TI</strong> (Tasy, Suporte, Infra)</li>
-              <li>Vagas em <strong>Dados/BI</strong> (SQL, Indicadores)</li>
-              <li>Vagas em <strong>Engenharia</strong> (Processos, Operações)</li>
+              <li><strong>Sistemas & TI:</strong> Tasy, Suporte e Infraestrutura.</li>
+              <li><strong>Dados & BI:</strong> SQL, Relatórios e Indicadores.</li>
+              <li><strong>Engenharia:</strong> Melhoria de Processos e Operações.</li>
             </ul>
           </div>
         </div>
+
         <footer class="footer">
           <p>© <span id="year"></span> Flavio Novais • GitHub Pages</p>
         </footer>
