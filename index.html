@@ -225,7 +225,7 @@
       </div>
     </section>
 
-    <!-- PROJETOS -->
+    <!-- PROJETOS (TODOS COM TEXTO COMPLETO) -->
     <section id="projetos" class="section section--alt">
       <div class="container">
         <div class="section__head">
@@ -235,7 +235,7 @@
 
         <div class="grid grid--1">
           
-          <!-- PROJETO 1 -->
+          <!-- PROJETO 1: BIBLIOTECA FÁRMACOS -->
           <article class="card project-full">
             <header>
               <span class="tag tag--accent">Tasy EMR • Gestão Hospitalar</span>
@@ -244,17 +244,20 @@
             <div class="project-full__body">
               <h4>1. O que é o projeto</h4>
               <p>Desenvolvimento de uma consulta SQL avançada para a extração de dados técnicos de medicamentos (doses, diluições e estabilidades) do ERP Tasy. O objetivo foi fornecer a base de dados necessária para a configuração da Biblioteca de Fármacos (Drug Library) das novas bombas de infusão da marca B Braun na unidade hospitalar HMG.</p>
+              
               <h4>2. O Problema Técnico</h4>
               <ul class="list">
-                <li>Dados Dispersos: As informações necessárias estavam espalhadas em mais de 9 tabelas diferentes.</li>
-                <li>Hierarquia de Dados: Muitas doses padrão estavam cadastradas na "capa" do material, mas não na aba de "Prescrição", ou vice-versa.</li>
-                <li>Variações de Via: Medicamentos com vias específicas não estavam sendo vinculados corretamente.</li>
-                <li>Codificação Técnica: Campos retornavam siglas internas ilegíveis para a equipe assistencial.</li>
+                <li><strong>Dados Dispersos:</strong> As informações necessárias estavam espalhadas em mais de 9 tabelas diferentes.</li>
+                <li><strong>Hierarquia de Dados:</strong> Muitas doses padrão estavam cadastradas na "capa" do material, mas não na aba de "Prescrição", ou vice-versa, resultando em campos vazios no relatório inicial.</li>
+                <li><strong>Variações de Via:</strong> Medicamentos com vias específicas (ex: IVA, IVN) não estavam sendo vinculados corretamente às regras gerais de estabilidade.</li>
+                <li><strong>Codificação Técnica:</strong> Campos retornavam apenas siglas internas (ex: 'H', 'MI'), ilegíveis para a equipe assistencial.</li>
               </ul>
+              
               <h4>3. A Solução Aplicada</h4>
-              <p>Utilizei Joins Complexos, Lógica de Fallback (NVL e NULLIF) e Normalização com DECODE e CASE para tradução de códigos internos para texto por extenso.</p>
+              <p>Utilizei técnicas avançadas de SQL para normalizar e consolidar os dados: Joins Complexos (MATERIAL, MATERIAL_DILUICAO, etc), Lógica de Fallback com <strong>NVL</strong> e <strong>NULLIF</strong>, e Normalização com <strong>DECODE</strong> e <strong>CASE</strong> para tradução de códigos para texto por extenso.</p>
+              
               <h4>4. O Impacto na Ponta</h4>
-              <p>Segurança do Paciente garantida e drástica redução de retrabalho das equipes de Farmácia e Engenharia Clínica.</p>
+              <p><strong>Segurança do Paciente:</strong> Garantiu configuração exata das bombas, reduzindo riscos de erros de medicação. <strong>Redução de Retrabalho:</strong> Automação substituiu conferência manual de centenas de itens.</p>
             </div>
             <footer class="project-full__tech">
               <strong>🛠️ Tecnologias Utilizadas:</strong>
@@ -264,7 +267,7 @@
             </footer>
           </article>
 
-          <!-- NOVO PROJETO (CONSUMO DIÁRIO) -->
+          <!-- PROJETO 2: CONSUMO DIÁRIO -->
           <article class="card project-full">
             <header>
               <span class="tag tag--accent">SQL Avançado • Suprimentos</span>
@@ -272,17 +275,20 @@
             </header>
             <div class="project-full__body">
               <h4>1. O que é o projeto?</h4>
-              <p>Reestruturação completa do relatório de Consumo Diário por Local de Estoque (WATE-1570). O objetivo é fornecer dados exatos para a parametrização de cotas e reposição inteligente de insumos.</p>
+              <p>Reestruturação completa do relatório de Consumo Diário por Local de Estoque (WATE-1570) no sistema Tasy EMR para parametrização de cotas e reposição inteligente de insumos.</p>
+              
               <h4>2. O Problema Técnico</h4>
               <ul class="list">
-                <li>Dados Incorretos: Erro de Join (produto cartesiano) multiplicava os valores de consumo indevidamente.</li>
-                <li>Excesso de "Ruído": Listagem de itens com consumo zero gerava documentos de 74 páginas desnecessárias.</li>
-                <li>Filtros Ineficientes: Parâmetros de data e unidade hospitalar não funcionavam corretamente.</li>
+                <li><strong>Dados Incorretos:</strong> Devido a um erro de Join (produto cartesiano), os valores de consumo eram multiplicados indevidamente.</li>
+                <li><strong>Excesso de "Ruído":</strong> O relatório listava todos os itens do estoque, gerando documentos de 74 páginas (90% consumo zero).</li>
+                <li><strong>Filtros Ineficientes:</strong> O parâmetro de data não respeitava a seleção do usuário e mostrava locais de estoque duplicados de outras unidades.</li>
               </ul>
+              
               <h4>3. A Solução Aplicada</h4>
-              <p>Refatoração do SQL corrigindo ligações entre tabelas, aplicação de cláusula <code>HAVING SUM(qt_consumo) > 0</code>, e uso da variável <code>:nr_estab_v</code> para filtragem dinâmica por unidade.</p>
+              <p>Refatoração do SQL corrigindo ligações entre as tabelas de material e movimento. Apliquei <strong>HAVING SUM(qt_consumo) > 0</strong> para filtrar lixo e utilizei a variável <strong>:nr_estab_v</strong> para filtrar dinamicamente a unidade hospitalar atual (HMG). Formatei campos usando TO_CHAR e DISTINCT para listas limpas.</p>
+              
               <h4>4. O Impacto na Ponta</h4>
-              <p>Redução do relatório de 74 para 8 páginas úteis, precisão decisória para evitar falta ou excesso de medicamentos e agilidade operacional.</p>
+              <p><strong>Redução de Desperdício:</strong> O relatório passou de 74 para 8 páginas de dados úteis. <strong>Precisão Decisória:</strong> Supervisão consegue evitar falta ou excesso de medicamentos nos setores.</p>
             </div>
             <footer class="project-full__tech">
               <strong>🛠️ Tecnologias e Ferramentas:</strong>
@@ -292,20 +298,26 @@
             </footer>
           </article>
 
-          <!-- PROJETO: REGRAS DE NEGÓCIO -->
+          <!-- PROJETO 3: REGRAS DE NEGÓCIO -->
           <article class="card project-full">
             <header>
-              <span class="tag tag--accent">Regras de Atributo • Tasy</span>
+              <span class="tag tag--accent">Regras de Atributo • Finanças</span>
               <h3>🚀 Customização de Regras de Negócio: Controle de Requisicão de Materiais</h3>
             </header>
             <div class="project-full__body">
               <h4>1. O que é o projeto</h4>
-              <p>Implementação de uma trava lógica no módulo de Requisição de Materiais para garantir que itens de "Consumo Paciente" sejam faturados corretamente.</p>
+              <p>Implementação de uma trava lógica no módulo de Requisição de Materiais do ERP Tasy para condicionar a obrigatoriedade de campos específicos.</p>
+              
+              <h4>2. O Problema Técnico</h4>
+              <p>O campo Atendimento era opcional. Quando a operação era "Consumo Paciente", o sistema permitia salvar sem vincular um número de atendimento. Isso causava perda financeira: o item saía do estoque, mas não era faturado para o paciente.</p>
+              
               <h4>3. A Solução Aplicada</h4>
-              <pre><code>/* Script aplicado no atributo NR_ATENDIMENTO */
-AND :CD_OPERACAO_ESTOQUE = [ID_CONSUMO_PACIENTE]</code></pre>
+              <p>Criação de uma <strong>Regra de Atributo</strong> no campo NR_ATENDIMENTO (Tabela REQUISICAO_MATERIAL) via dicionário de dados do Tasy:</p>
+              <pre><code>AND :CD_OPERACAO_ESTOQUE = [ID_CONSUMO_PACIENTE]</code></pre>
+              <p>O ícone de obrigatoriedade aparece dinamicamente impedindo o salvamento se o campo estiver vazio.</p>
+              
               <h4>4. O Impacto na Ponta</h4>
-              <p>Garantia de Receita eliminando perdas financeiras e 100% de rastreabilidade nos itens consumidos.</p>
+              <p><strong>Garantia de Receita:</strong> Eliminou a perda financeira de materiais consumidos e não cobrados. <strong>Rastreabilidade:</strong> Assegurou 100% de integridade nos itens de consumo.</p>
             </div>
             <footer class="project-full__tech">
               <strong>🛠️ Tecnologias Utilizadas:</strong>
@@ -315,7 +327,7 @@ AND :CD_OPERACAO_ESTOQUE = [ID_CONSUMO_PACIENTE]</code></pre>
             </footer>
           </article>
 
-          <!-- PROJETO: HEMOTERAPIA -->
+          <!-- PROJETO 4: HEMOTERAPIA -->
           <article class="card project-full">
             <header>
               <span class="tag tag--accent">BI • Hemoterapia</span>
@@ -323,9 +335,20 @@ AND :CD_OPERACAO_ESTOQUE = [ID_CONSUMO_PACIENTE]</code></pre>
             </header>
             <div class="project-full__body">
               <h4>1. O que é o projeto</h4>
-              <p>Desenvolvimento de relatório analítico para monitorar o ciclo de vida de uma transfusão, desde a solicitação até a beira leito.</p>
+              <p>Desenvolvimento de relatório analítico de SLA para monitorar o ciclo de vida de uma transfusão, desde a solicitação médica até a beira leito (ADEP).</p>
+              
+              <h4>2. O Problema Técnico</h4>
+              <ul class="list">
+                <li><strong>Fragmentação:</strong> Dados espalhados em módulos Médico, Laboratório e Enfermagem.</li>
+                <li><strong>Dados Incompletos:</strong> Registros de coleta apresentavam campos nulos.</li>
+                <li><strong>Complexidade:</strong> Uma reserva pode conter múltiplas bolsas e IDs numéricos de difícil interpretação.</li>
+              </ul>
+              
+              <h4>3. A Solução Aplicada</h4>
+              <p>Desenvolvi query avançada com <strong>LEFT JOINs</strong> entre SAN_RESERVA, SAN_PRODUCAO_V e SAN_TRANSFUSAO. Usei <strong>NVL</strong> para buscar coleta em tabelas secundárias e <strong>CASE WHEN</strong> para traduzir domínios de urgência. Criei colunas calculadas para tempo de resposta em minutos.</p>
+              
               <h4>4. O Impacto na Ponta</h4>
-              <p>Identificação de gargalos, segurança do paciente em transfusões de emergência e auditoria completa para acreditações (ONA/JCI).</p>
+              <p><strong>Identificação de Gargalos:</strong> Monitoramento exato do tempo de resposta por setor. <strong>Segurança:</strong> Controle de tempos críticos em transfusões de emergência.</p>
             </div>
             <footer class="project-full__tech">
               <strong>🛠️ Tecnologias Utilizadas:</strong>
@@ -335,7 +358,7 @@ AND :CD_OPERACAO_ESTOQUE = [ID_CONSUMO_PACIENTE]</code></pre>
             </footer>
           </article>
 
-          <!-- PROJETO: ETIQUETAS ZEBRA -->
+          <!-- PROJETO 5: ETIQUETAS ZEBRA -->
           <article class="card project-full">
             <header>
               <span class="tag tag--accent">Zebra EPL • Farmácia</span>
@@ -343,7 +366,16 @@ AND :CD_OPERACAO_ESTOQUE = [ID_CONSUMO_PACIENTE]</code></pre>
             </header>
             <div class="project-full__body">
               <h4>1. O que é o projeto?</h4>
-              <p>Melhoria de etiquetas térmicas utilizando SQL dinâmico e programação EPL para garantir 100% de legibilidade e segurança na beira-leito.</p>
+              <p>Melhoria de etiquetas térmicas para farmácia hospitalar, transformando-as em ferramentas de segurança clínica.</p>
+              
+              <h4>2. O Problema Técnico</h4>
+              <p>A etiqueta original não exibia horários de administração, dificultando o trabalho da enfermagem na beira-leito. Além disso, o layout causava borrões no código de barras, impedindo a leitura por scanners.</p>
+              
+              <h4>3. A Solução Aplicada</h4>
+              <p>Implementei <strong>SQL Dinâmico</strong> com LISTAGG para agrupar horários em uma única linha. Reprogramei o layout em linguagem <strong>EPL (Zebra)</strong>, redimensionando o barcode e reorganizando coordenadas X/Y para evitar sobreposições.</p>
+              
+              <h4>4. O Impacto na Ponta</h4>
+              <p><strong>Segurança:</strong> Enfermagem visualiza o horário exato vinculado ao lote. <strong>Eficiência:</strong> Aumento de 100% na taxa de leitura dos códigos de barras pelos coletores.</p>
             </div>
             <footer class="project-full__tech">
               <strong>🛠️ Tecnologias Utilizadas:</strong>
@@ -353,7 +385,7 @@ AND :CD_OPERACAO_ESTOQUE = [ID_CONSUMO_PACIENTE]</code></pre>
             </footer>
           </article>
 
-          <!-- PROJETO: CATE1011 -->
+          <!-- PROJETO 6: CATE1011 -->
           <article class="card project-full">
             <header>
               <span class="tag tag--accent">Tasy Reports • Delphi-based</span>
@@ -361,9 +393,19 @@ AND :CD_OPERACAO_ESTOQUE = [ID_CONSUMO_PACIENTE]</code></pre>
             </header>
             <div class="project-full__body">
               <h4>1. O que é o projeto</h4>
-              <p>Reestruturação do relatório de atendimento para reduzir desperdício de papel e incluir códigos de barras individuais para beira-leito.</p>
+              <p>Otimização do relatório CATE1011 para conferência de medicamentos à beira do leito.</p>
+              
+              <h4>2. O Problema Técnico</h4>
+              <ul class="list">
+                <li><strong>Desperdício:</strong> Gerava uma nova página para cada lote (5 lotes = 5 folhas de papel).</li>
+                <li><strong>Rastreabilidade:</strong> Não havia código de barras individual por linha de medicamento.</li>
+              </ul>
+              
+              <h4>3. A Solução Aplicada</h4>
+              <p>Alterei a lógica de agrupamento de Lote para <strong>Atendimento (nr_atendimento)</strong>. Inseri componentes de barcode <strong>CODE128_C</strong> diretamente na banda de detalhes e otimizei o layout para eliminar "buracos" brancos no fim da página.</p>
+              
               <h4>4. Impacto na Ponta</h4>
-              <p>Redução de 60% no consumo de papel e toner e eliminação de erros de digitação manual.</p>
+              <p><strong>Economia:</strong> Redução de 60% no consumo de papel e toner. <strong>Agilidade:</strong> Bipagem correta de cada item na beira-leito eliminando erros manuais.</p>
             </div>
             <footer class="project-full__tech">
               <strong>🛠️ Tecnologias Utilizadas:</strong>
@@ -393,11 +435,11 @@ AND :CD_OPERACAO_ESTOQUE = [ID_CONSUMO_PACIENTE]</code></pre>
             <p class="muted tiny" style="margin-top:15px">Telefones: (75) 99986-4133 / (75) 98331-9992</p>
           </div>
           <div class="card">
-            <h3>Áreas de Interesse</h3>
+            <h3>Foco de Atuação</h3>
             <ul class="list">
-              <li>Sistemas, Suporte e Infraestrutura</li>
-              <li>Análise de Dados e Business Intelligence</li>
-              <li>Engenharia de Processos e Operações</li>
+              <li>Sistemas Hospitalares (Tasy EMR)</li>
+              <li>Análise de Dados e BI (SQL)</li>
+              <li>Eficiência e Processos Industriais</li>
             </ul>
           </div>
         </div>
