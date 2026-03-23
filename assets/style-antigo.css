@@ -187,3 +187,41 @@ h1{font-size:42px; line-height:1.05; margin:14px 0}
   h1{font-size:32px}
   .menu{display:none}
 }
+/* Formatação do texto longo da Liga */
+.verbatim-text {
+  margin-top: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.verbatim-text p {
+  margin-bottom: 12px;
+}
+.verbatim-text strong {
+  color: var(--text);
+  display: block;
+  margin-top: 18px;
+  font-size: 1.1rem;
+}
+
+/* Estilo para os cards de certificação */
+.cert-card h3 {
+  margin: 10px 0 5px 0;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+.cert-card .muted {
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+.cert-card p:not(.muted) {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Ajuste do Menu Mobile para caber o novo botão */
+@media (max-width: 940px) {
+  .nav__inner { flex-direction: column; gap: 10px; }
+  .menu { display: flex; flex-wrap: wrap; justify-content: center; font-size: 0.8rem; }
+}
