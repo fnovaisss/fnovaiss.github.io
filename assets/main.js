@@ -5,6 +5,7 @@
   const btn = document.getElementById("themeBtn");
   const key = "fnovaiss-theme";
   
+  // Toggler de tema simplificado
   btn?.addEventListener("click", () => {
     const current = document.documentElement.getAttribute("data-theme");
     const next = current === "light" ? "" : "light";
@@ -13,6 +14,7 @@
     btn.textContent = next === "light" ? "☀" : "☾";
   });
 
+  // Carregar tema salvo
   const saved = localStorage.getItem(key);
   if (saved) {
     document.documentElement.setAttribute("data-theme", saved);
