@@ -1,7 +1,9 @@
 (function () {
+  // Ano Atual no Rodapé
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // Troca de Tema (Dark/Light)
   const btn = document.getElementById("themeBtn");
   const key = "fnovaiss-theme";
   const saved = localStorage.getItem(key);
@@ -25,18 +27,4 @@
     }
     refreshIcon();
   });
-
-  function setEmail(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    const user = "f.novaisss";
-    const domain = "gmail.com";
-    const subject = encodeURIComponent("Contato via Portfólio (GitHub Pages)");
-    const body = encodeURIComponent(
-      "Olá Flavio!\n\nVi seu portfólio no GitHub Pages e gostaria de conversar sobre oportunidades.\n\nObrigado!"
-    );
-    el.setAttribute("href", `mailto:${user}@${domain}?subject=${subject}&body=${body}`);
-  }
-  setEmail("emailBtn");
-  setEmail("emailBtn2");
 })();
