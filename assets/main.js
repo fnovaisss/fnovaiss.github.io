@@ -13,4 +13,19 @@
     document.documentElement.setAttribute("data-theme", next);
     localStorage.setItem(key, next);
   });
+
+  // FUNÇÃO DE E-MAIL CORRIGIDA PARA AMBOS OS BOTÕES
+  function setEmail(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const user = "f.novaisss";
+    const domain = "gmail.com";
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.location.href = `mailto:${user}@${domain}`;
+    });
+  }
+  
+  setEmail("emailBtn");  // Hero
+  setEmail("emailBtn2"); // Contato
 })();
