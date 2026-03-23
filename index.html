@@ -4,18 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Flavio Novais | TI • Dados • Engenharia</title>
-  <meta name="description" content="Portfólio de Flavio Novais: Especialista Tasy, SQL, Engenharia e Gestão Hospitalar." />
+  <meta name="description" content="Portfólio de Flavio Novais: Tasy (Farmácia/Suprimentos), Oracle SQL, ServiceNow/GLPI, infraestrutura e visão analítica de Engenharia de Produção." />
+  <meta name="theme-color" content="#0b1020" />
   <link rel="stylesheet" href="assets/style-antigo.css" />
 </head>
 
 <body>
   <header class="nav">
     <div class="container nav__inner">
-      <a class="brand" href="#top">
+      <a class="brand" href="#top" aria-label="Ir para o topo">
         <span class="brand__dot"></span>
         <span class="brand__text">Flavio Novais</span>
       </a>
-      <nav class="menu">
+
+      <nav class="menu" aria-label="Navegação principal">
         <a href="#sobre">Sobre</a>
         <a href="#experiencia">Experiência</a>
         <a href="#certificacoes">Certificações</a>
@@ -23,12 +25,13 @@
         <a href="#projetos">Projetos</a>
         <a href="#contato" class="btn btn--small">Contato</a>
       </nav>
-      <button class="icon-btn" id="themeBtn">☾</button>
+
+      <button class="icon-btn" id="themeBtn" aria-label="Alternar tema" title="Alternar tema">☾</button>
     </div>
   </header>
 
   <main id="top">
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__content">
@@ -36,9 +39,9 @@
           <h1>Flavio Novais</h1>
           <p class="lead">Especialista de TI em Sistema Tasy | Gestão, Liderança e Processos Hospitalares.</p>
           <div class="hero-buttons">
-            <a class="btn btn--small" target="_blank" href="https://wa.me/5575999864133">WhatsApp</a>
-            <a class="btn btn--small btn--ghost" target="_blank" href="https://github.com/fnovaisss">GitHub</a>
-            <a class="btn btn--small btn--ghost" target="_blank" href="https://www.linkedin.com/in/flavio-novais-47605240/">LinkedIn</a>
+            <a class="btn btn--small" target="_blank" rel="noreferrer" href="https://wa.me/5575999864133">WhatsApp</a>
+            <a class="btn btn--small btn--ghost" target="_blank" rel="noreferrer" href="https://github.com/fnovaisss">GitHub</a>
+            <a class="btn btn--small btn--ghost" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/flavio-novais-47605240/">LinkedIn</a>
           </div>
           <div class="quick">
             <div class="quick__item"><span class="quick__k">Foco</span><span class="quick__v">Sistemas • Dados • Processos</span></div>
@@ -47,7 +50,7 @@
         </div>
         <aside class="hero__card">
           <div class="card profile">
-            <img class="profile__img" src="assets/img/profile.jpg" alt="Flavio Novais" />
+            <img class="profile__img" src="assets/img/profile.jpg" alt="Foto de Flavio Novais" />
           </div>
         </aside>
       </div>
@@ -56,18 +59,21 @@
     <!-- SOBRE (RESTAURADO COMPLETO) -->
     <section id="sobre" class="section">
       <div class="container">
-        <div class="section__head"><h2>Sobre</h2><p>Visão de negócio e foco na melhoria de processos por meio da tecnologia.</p></div>
+        <div class="section__head">
+          <h2>Sobre</h2>
+          <p>Visão de negócio e foco na melhoria de processos por meio da tecnologia.</p>
+        </div>
         <div class="card about-text">
           <p>Profissional de Tecnologia da Informação com mais de 8 anos de experiência, atuando em ambientes corporativos com sistemas, suporte, infraestrutura e análise de dados. Minha trajetória é marcada pela evolução contínua, visão de negócio e foco na melhoria de processos por meio da tecnologia.</p>
           <p>Sou graduado em <strong>Sistemas de Informação</strong> e também em <strong>Engenharia de Produção</strong>, combinação que fortalece minha capacidade de unir tecnologia, processos e gestão. A formação em Engenharia me proporcionou uma visão mais analítica e estratégica do negócio, com foco em eficiência operacional, otimização de recursos, indicadores de desempenho e tomada de decisão orientada por dados.</p>
           <p>Possuo experiência na implantação, parametrização e suporte ao sistema <strong>Tasy</strong>, com atuação nos módulos de Farmácia e Suprimentos, realizando mapeamento e melhoria de processos operacionais, análise de inconsistências, desenvolvimento de relatórios SQL e apoio à gestão de indicadores.</p>
           <p>Também atuei com suporte N1 e N2, gestão de chamados via ServiceNow e GLPI, cumprimento de SLA, atendimento a usuários em ambientes críticos, além de experiência em infraestrutura, redes e administração de ambientes.</p>
-          <p>Atualmente, venho aprofundando meus conhecimentos em <strong>SQL, Power BI e análise de dados</strong>, com o objetivo de atuar cada vez mais em funções que envolvam Tecnologia, Engenharia e Inteligência de Dados.</p>
+          <p>Atualmente, venho aprofundando meus conhecimentos em <strong>SQL, Power BI e análise de dados</strong>, com o objetivo de atuar cada vez mais em funções que envolvam Tecnologia, Engenharia e Inteligência de Dados, contribuindo para a tomada de decisão estratégica em diferentes segmentos de negócio.</p>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIÊNCIA (LIGA DETALHADA + OUTRAS RESTAURADAS) -->
+    <!-- EXPERIÊNCIA (LIGA DETALHADA + OUTRAS INTEGRAIS) -->
     <section id="experiencia" class="section section--alt">
       <div class="container">
         <div class="section__head"><h2>Experiência Profissional</h2></div>
@@ -78,11 +84,12 @@
             <div class="timeline__content">
               <header>
                 <h3>Liga Álvaro Contra a Maternidade Infantil</h3>
-                <p class="role-text">Especialista de TI em Sistema Tasy | Gestão, Liderança e Processos Hospitalares (Promovido de Analista) 06/2024 - Atual</p>
+                <p class="role-text">Especialista de TI em Sistema Tasy | Gestão, Liderança e Processos Hospitalares (Promovido de Analista) Atual - 06/2024</p>
               </header>
               <div class="verbatim-text">
                 <p><strong>Sobre a Minha Atuação na Liga Álvaro Bahia</strong></p>
                 <p>Como Especialista de TI na Liga Álvaro Bahia (LABCMI), minha trajetória é marcada pelo domínio do sistema Tasy (Philips) e pela gestão de processos em ambientes críticos. Minha atuação no Hospital Materno Infantil de Alagoinhas (HMIA) foi fundamental para consolidar minha visão estratégica e técnica da saúde.</p>
+                
                 <p><strong>Visão do Hospital (HMIA)</strong></p>
                 <p>Fui responsável pelo gerenciamento de toda a frente assistencial e administrativa via Tasy no HMIA, cobrindo áreas vitais como:</p>
                 <ul class="list">
@@ -90,17 +97,31 @@
                   <li>Apoio e Logística: Recepção, Rouparia, Copa, Nutrição, Farmácia, Suprimentos e Almoxarifado.</li>
                   <li>Administrativo: Integração com o RH e processos de gestão.</li>
                 </ul>
+
                 <p><strong>Liderança e Capacitação</strong></p>
                 <p>Minha contribuição foi além da configuração do software. Atuei diretamente na capacitação e treinamento de equipes multidisciplinares, incluindo médicos, enfermeiros, técnicos e gestores. Além disso, liderei a equipe técnica local (técnicos de informática), estabelecendo rotinas e diretrizes operacionais.</p>
+
                 <p><strong>Interface Estratégica</strong></p>
-                <p>Participei ativamente de reuniões semanais com a diretoria e coordenações (Médica, Enfermagem e Farmácia), alinhando a tecnologia aos indicadores de desempenho da unidade.</p>
+                <p>Participei ativamente de reuniões semanais com a diretoria e coordenações (Médica, Enfermagem e Farmácia), alinhando a tecnologia aos indicadores de desempenho da unidade. Essa experiência me permitiu entender o hospital não apenas como um sistema, mas como uma engrenagem onde a TI é o motor da eficiência e da segurança do paciente.</p>
+
                 <p><strong>Evolução Profissional e Domínio do Tasy</strong></p>
+                <p>Iniciei como Analista e hoje atuo como Especialista de TI. Meu foco principal é a sustentação e otimização do Tasy (Philips), um dos ERPs de saúde mais utilizados globalmente. Minha atuação é transversal, o que me permitiu dominar o sistema em diferentes frentes:</p>
                 <ul class="list">
-                  <li>Configuração e Regras de Negócio: Especialista nos módulos de Farmácia e Suprimentos.</li>
-                  <li>Inteligência de Dados (SQL): Desenvolvimento de relatórios complexos em SQL.</li>
-                  <li>Segurança e Automação: Desenvolvimento de sistemas de etiquetas e fluxos de trabalho.</li>
-                  <li>Troubleshooting (Nível 3): Correção de inconsistências operacionais em tempo real.</li>
+                  <li>Configuração e Regras de Negócio: Especialista nos módulos de Farmácia e Suprimentos, garantindo que o fluxo de materiais e medicamentos seja eficiente e rastreável.</li>
+                  <li>Inteligência de Dados (SQL): Desenvolvimento de relatórios complexos em SQL para suporte à decisão clínica e administrativa, transformando dados brutos em inteligência estratégica.</li>
+                  <li>Segurança e Automação: Desenvolvimento de sistemas de etiquetas e fluxos de trabalho que reduzem erros humanos e aumentam a segurança do paciente.</li>
+                  <li>Resolução de Problemas (Troubleshooting): Atuação direta na correção de inconsistências operacionais em tempo real, garantindo que a tecnologia nunca seja um gargalo para o atendimento médico.</li>
                 </ul>
+
+                <p><strong>Contribuição para a Empresa</strong></p>
+                <p>Meu diferencial técnico está na capacidade de customizar o Tasy para as necessidades reais da ponta. Alguns dos projetos de maior impacto que desenvolvi incluem:</p>
+                <ol class="list">
+                  <li>Desenvolvimento de Relatórios Estratégicos (SQL): Criação de consultas avançadas para extração de dados que auxiliam o faturamento, a diretoria clínica e a gestão de estoque.</li>
+                  <li>Sistemas de Etiquetagem Customizados: Desenvolvi modelos de etiquetas integrados ao Tasy para farmácia e suprimentos, garantindo a rastreabilidade absoluta.</li>
+                  <li>Mapeamento e Automação de Processos: Utilização de ferramentas como Draw.io e BPMN para redesenhar fluxos de trabalho.</li>
+                  <li>Troubleshooting Nível 3: Resolução de inconsistências complexas no banco de dados e na lógica do sistema.</li>
+                </ol>
+
                 <p><strong>Minha Missão</strong></p>
                 <p>Acredito que a tecnologia deve ser invisível e eficiente. Cada relatório SQL que otimizo ou fluxo que mapeio tem um objetivo final claro: dar mais agilidade aos profissionais de saúde para que eles possam focar no que realmente importa: salvar vidas.</p>
               </div>
@@ -173,7 +194,7 @@
       </div>
     </section>
 
-    <!-- CERTIFICAÇÕES (TODAS EM CARDS PADRONIZADOS) -->
+    <!-- CERTIFICAÇÕES (PADRONIZADAS) -->
     <section id="certificacoes" class="section">
       <div class="container">
         <div class="section__head"><h2>Certificações</h2></div>
@@ -183,65 +204,64 @@
             <span class="tag tag--accent">Data Science Academy</span>
             <h3>Python do Básico a Aplicações de IA</h3>
             <p class="muted">Carga Horária: 96h | 2026</p>
-            <p>Domínio da linguagem Python focado em lógica de programação e criação de soluções de Inteligência Artificial.</p>
+            <p>Domínio da linguagem Python para lógica de programação e criação de soluções de Inteligência Artificial.</p>
           </div>
 
           <div class="card cert-card">
             <span class="tag tag--accent">Data Science Academy</span>
             <h3>Power BI para Business Intelligence e Data Science</h3>
             <p class="muted">Carga Horária: 72h | 2026</p>
-            <p>Habilidades avançadas em análise de dados e dashboards estratégicos com Power BI.</p>
+            <p>Desenvolvimento de dashboards estratégicos e análise de dados de alto nível com Microsoft Power BI.</p>
           </div>
 
           <div class="card cert-card">
             <span class="tag tag--accent">Udemy</span>
             <h3>O Curso Completo de Banco de Dados e SQL</h3>
             <p class="muted">Carga Horária: 58.5h | 2025</p>
-            <p>Domínio profundo de bancos de dados relacionais e linguagem SQL para relatórios complexos.</p>
+            <p>Domínio de bancos de dados relacionais e SQL para extração e manipulação de grandes volumes de dados.</p>
           </div>
 
           <div class="card cert-card">
             <span class="tag">Alura</span>
             <h3>Java Script, Python e Power BI</h3>
             <p class="muted">Concluído em 2023</p>
-            <p>Formação em tecnologias essenciais para suporte e análise de dados corporativos.</p>
+            <p>Formação em tecnologias de suporte, automação e visualização de dados corporativos.</p>
           </div>
 
           <div class="card cert-card">
             <span class="tag">VianaTel</span>
-            <h3>Normas Regulamentadoras (NR)</h3>
+            <h3>Segurança e Normas (NR)</h3>
             <p class="muted">NR-10, NR-06, NR-35 | 2021</p>
-            <p>Qualificação em segurança para serviços em eletricidade, equipamentos de proteção e trabalho em altura.</p>
+            <p>Capacitação técnica em eletricidade, EPIs e trabalho em altura.</p>
           </div>
 
           <div class="card cert-card">
             <span class="tag">Wizard</span>
             <h3>Língua Inglesa</h3>
             <p class="muted">Nível: Básico | 2016</p>
-            <p>Conhecimentos fundamentais para leitura técnica e comunicação básica no idioma.</p>
+            <p>Conhecimentos para leitura técnica e comunicação no idioma.</p>
           </div>
 
           <div class="card cert-card">
             <span class="tag">SENAI</span>
             <h3>Operador de Processos Industriais</h3>
             <p class="muted">Concluído em 2014</p>
-            <p>Capacitação voltada para a gestão e controle de linhas de produção e processos industriais.</p>
+            <p>Qualificação em controle de linhas de produção e eficiência industrial.</p>
           </div>
 
           <div class="card cert-card">
             <span class="tag">Microlins</span>
             <h3>Design & Web</h3>
             <p class="muted">Concluído em 2010</p>
-            <p>Fundamentos de criação visual, ferramentas de design gráfico e desenvolvimento web básico.</p>
+            <p>Fundamentos de criação visual, Corel Draw e Photoshop.</p>
           </div>
 
-          <div class="card cert-card">
+          <div class="card cert-card" style="grid-column: span 1;">
             <span class="tag">Microlins</span>
             <h3>Montagem e Manutenção</h3>
             <p class="muted">Computadores e Redes | 2009</p>
-            <p>Capacitação técnica em hardware, diagnóstico de falhas e infraestrutura de redes locais.</p>
+            <p>Suporte técnico em hardware e infraestrutura de redes locais.</p>
           </div>
-
         </div>
       </div>
     </section>
@@ -254,33 +274,67 @@
           <div class="card education-card">
             <span class="tag">Superior</span>
             <h3>Bel. Sistema de Informação</h3>
-            <p class="muted">UNEB | 2023</p>
+            <p class="muted">UNEB - Concluído: 2023</p>
           </div>
           <div class="card education-card">
             <span class="tag">Superior</span>
             <h3>Bel. Engenharia de Produção</h3>
-            <p class="muted">Santíssimo Sacramento | 2019</p>
+            <p class="muted">Santíssimo Sacramento - Concluído: 2019</p>
           </div>
           <div class="card education-card">
             <span class="tag">Técnico</span>
             <h3>Tec. Eletromecânica</h3>
-            <p class="muted">SENAI | 2017</p>
+            <p class="muted">SENAI - Concluído: 2017</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROJETOS -->
+    <!-- PROJETOS (TODOS OS 6 RESTAURADOS) -->
     <section id="projetos" class="section">
       <div class="container">
-        <div class="section__head"><h2>Projetos em Destaque</h2><p>Casos reais de aplicação de SQL e Tasy.</p></div>
+        <div class="section__head">
+          <h2>Projetos em Destaque</h2>
+          <p>Casos reais de aplicação de SQL, Engenharia de Processos e Tasy EMR.</p>
+        </div>
         <div class="grid grid--1">
-          <!-- Card de exemplo de projeto (Pode repetir para os outros) -->
+          
           <article class="card project-full">
-            <header><h3>Extração de Biblioteca de Fármacos</h3></header>
+            <header><h3>🏥 Extração de Biblioteca de Fármacos para Bombas de Infusão</h3></header>
             <p>Desenvolvimento de consulta SQL avançada para extração de dados técnicos de medicamentos no Tasy.</p>
             <footer class="project-full__tech"><span class="tag">Oracle SQL</span> <span class="tag">Tasy EMR</span></footer>
           </article>
+
+          <article class="card project-full">
+            <header><h3>🚀 Relatório de Consumo Diário por Local de Estoque</h3></header>
+            <p>Reestruturação completa do relatório WATE-1570 para parametrização de cotas e reposição inteligente.</p>
+            <footer class="project-full__tech"><span class="tag">SQL PL/SQL</span> <span class="tag">Tasy EMR</span></footer>
+          </article>
+
+          <article class="card project-full">
+            <header><h3>📊 Controle de Requisição de Materiais</h3></header>
+            <p>Customização de Regras de Atributo para obrigatoriedade de faturamento de consumo paciente.</p>
+            <footer class="project-full__tech"><span class="tag">Dicionário Tasy</span> <span class="tag">SQL</span></footer>
+          </article>
+
+          <article class="card project-full">
+            <header><h3>🩸 SLA Transfusional (Hemoterapia)</h3></header>
+            <p>Relatório de BI para monitoramento do ciclo de vida da transfusão (Solicitação à Beira Leito).</p>
+            <footer class="project-full__tech"><span class="tag">Analytical SQL</span> <span class="tag">BI</span></footer>
+          </article>
+
+          <article class="card project-full">
+            <header><h3>🏷️ Otimização de Etiquetas de Dispensação</h3></header>
+            <p>Reprogramação de layout em EPL (Zebra) com integração de horários de administração dinâmicos.</p>
+            <footer class="project-full__tech"><span class="tag">EPL (Zebra)</span> <span class="tag">SQL</span></footer>
+          </article>
+
+          <article class="card project-full">
+            <header><h3>📉 Redução de Desperdício (CATE1011)</h3></header>
+            <p>Otimização de relatório Delphi-based reduzindo em 60% o consumo de papel e garantindo leitura de barcode.</p>
+            <footer class="project-full__tech"><span class="tag">Tasy Reports</span> <span class="tag">SQL</span></footer>
+          </article>
+
         </div>
       </div>
     </section>
@@ -294,7 +348,7 @@
             <div class="contact-actions">
               <a class="btn" target="_blank" href="https://wa.me/5575999864133">WhatsApp</a>
               <a class="btn btn--ghost" target="_blank" href="https://www.linkedin.com/in/flavio-novais-47605240/">LinkedIn</a>
-              <a class="btn btn--ghost" target="_blank" href="https://github.com/fnovaisss">GitHub</a>
+              <a class="btn btn--ghost" href="#" id="emailBtn2">E-mail</a>
             </div>
             <p class="muted tiny" style="margin-top:15px">Telefones: (75) 99986-4133 / (75) 98331-9992</p>
           </div>
@@ -311,7 +365,7 @@
     </section>
   </main>
 
-  <footer class="footer"><p>© <span id="year"></span> Flavio Novais • TI • Dados • Engenharia</p></footer>
+  <footer class="footer"><p>© <span id="year"></span> Flavio Novais • Portfólio Digital</p></footer>
   <script src="assets/main.js"></script>
 </body>
 </html>
