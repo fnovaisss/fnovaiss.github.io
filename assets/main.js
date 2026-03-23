@@ -7,17 +7,26 @@
   const saved = localStorage.getItem(key);
   if (saved) document.documentElement.setAttribute("data-theme", saved);
 
+  function refreshIcon() {
+    const theme = document.documentElement.getAttribute("data-theme");
+    if (btn) btn.textContent = theme === "light" ? "☀" : "☾";
+  }
+  refreshIcon();
+
   btn?.addEventListener("click", () => {
     const current = document.documentElement.getAttribute("data-theme");
     const next = current === "light" ? "" : "light";
     document.documentElement.setAttribute("data-theme", next);
     localStorage.setItem(key, next);
+    refreshIcon();
   });
 
-  const emailFunc = (e) => {
-    e.preventDefault();
-    window.location.href = "mailto:f.novaisss@gmail.com";
-  };
-  document.getElementById("emailBtn")?.addEventListener("click", emailFunc);
-  document.getElementById("emailBtn2")?.addEventListener("click", emailFunc);
+  function setEmail(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const user = "f.novaisss";
+    const domain = "gmail.com";
+    el.setAttribute("href", `mailto:${user}@${domain}`);
+  }
+  setEmail("emailBtn2");
 })();
