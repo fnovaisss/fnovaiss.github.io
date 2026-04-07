@@ -134,9 +134,43 @@
           <article class="timeline__item">
             <div class="timeline__dot"></div>
             <div class="timeline__content">
-              <h3>Hapvida</h3>
-              <p class="role-text">Técnico de Suporte TI (08/2021 - 06/2024)</p>
-              <p>Suporte N1 e N2, atendendo tickets abertos no ServiceNow, cumprindo SLAs; Configuração de servidor (fortigate, velocloud); Suporte ao sistema Hospitalar, Hapvida, PEP, MedNews; Participação na Brigada, CIPA e Comissão de Meio Ambiente.</p>
+              <header>
+                <h3>Hapvida NotreDame Intermédica</h3>
+                <p class="role-text">Técnico de Suporte de TI (08/2021 - 06/2024)</p>
+              </header>
+              <div class="verbatim-text">
+                <p><strong>Sobre a Minha Atuação no Hapvida NotreDame Intermédica</strong></p>
+                <p>Como Técnico de Suporte de TI no Hapvida, atuei na linha de frente tecnológica de uma das maiores operadoras de saúde do mundo. Minha missão era garantir a continuidade operacional e a alta disponibilidade dos serviços em um ambiente de missão crítica, onde a tecnologia é o alicerce para o atendimento ágil e seguro ao paciente.</p>
+                <p><strong>Gestão de Serviços e Performance (SLA)</strong></p>
+                <p>Utilizando o ServiceNow como ferramenta central de gestão, fui responsável pelo atendimento de chamados N1 e N2, assegurando o cumprimento rigoroso dos indicadores de SLA (Service Level Agreement). Minha atuação focava na resolução ágil de incidentes, garantindo que as unidades de saúde mantivessem seu fluxo operacional sem interrupções.</p>
+                <p><strong>Infraestrutura e Conectividade</strong></p>
+                <p>Minha experiência envolveu a sustentação da infraestrutura de rede e segurança, lidando com tecnologias essenciais para a comunicação entre unidades:</p>
+                <ul class="list">
+                  <li><strong>Segurança de Rede:</strong> Configuração e suporte em ambientes com Fortigate, garantindo a integridade e segurança dos dados trafegados.</li>
+                  <li><strong>SD-WAN e Conectividade:</strong> Atuação com VeloCloud, otimizando a performance da rede e garantindo a estabilidade necessária para o funcionamento dos sistemas hospitalares em tempo real.</li>
+                </ul>
+                <p><strong>Domínio do Ecossistema Digital de Saúde</strong></p>
+                <p>Prestei suporte especializado aos softwares que regem a operação hospitalar do grupo, garantindo que as ferramentas estivessem sempre à disposição do corpo clínico e administrativo:</p>
+                <ul class="list">
+                  <li><strong>PEP (Prontuário Eletrônico do Paciente):</strong> Suporte direto à ferramenta onde toda a jornada do paciente é registrada.</li>
+                  <li><strong>Sistemas Especializados:</strong> Atendimento e suporte aos sistemas Hapvida, compreendendo as particularidades de cada fluxo assistencial.</li>
+                </ul>
+                <p><strong>Engajamento Institucional e Segurança do Trabalho</strong></p>
+                <p>Além das atribuições técnicas de TI, exerci um papel ativo na cultura organizacional e na segurança da unidade, participando de comissões fundamentais:</p>
+                <ul class="list">
+                  <li><strong>CIPA</strong> (Comissão Interna de Prevenção de Acidentes): Atuação na promoção da segurança e saúde dos colaboradores.</li>
+                  <li><strong>Brigada de Incêndio:</strong> Capacitação para resposta rápida em situações de emergência.</li>
+                  <li><strong>Comissão de Meio Ambiente:</strong> Apoio a iniciativas de sustentabilidade e descarte correto de resíduos tecnológicos.</li>
+                </ul>
+                <p><strong>Contribuição para a Empresa</strong></p>
+                <ul class="list">
+                  <li><strong>Redução de Downtime:</strong> Atuação proativa na resolução de problemas de conectividade e hardware, minimizando o impacto no atendimento ao cliente.</li>
+                  <li><strong>Suporte Multidisciplinar:</strong> Capacidade de traduzir a linguagem técnica para profissionais de saúde, facilitando a adoção e o uso correto das tecnologias disponíveis.</li>
+                  <li><strong>Conformidade e Segurança:</strong> Garantia de que as configurações de rede e acesso seguissem as normas corporativas e de proteção de dados (LGPD).</li>
+                </ul>
+                <p><strong>Conclusão da Experiência</strong></p>
+                <p>Minha passagem pelo Hapvida foi o alicerce da minha carreira na saúde digital. Ali, aprendi a trabalhar sob pressão, a entender a urgência de um ambiente hospitalar e a importância de uma infraestrutura de TI resiliente. Essa experiência me preparou para os desafios complexos de gestão de sistemas que assumi posteriormente, consolidando minha visão de que a TI é o suporte invisível que permite à medicina salvar vidas.</p>
+              </div>
             </div>
           </article>
 
@@ -321,17 +355,31 @@
             </header>
             <div class="project-full__body">
               <h4>1. O que é o projeto?</h4>
-              <p>Reestruturação do relatório WATE-1570 no Tasy EMR para parametrização de cotas.</p>
+              <p>Reestruturação completa do relatório de Consumo Diário por Local de Estoque (WATE-1570) no sistema Tasy EMR. O objetivo do relatório é fornecer à supervisão de estoque e farmácia os dados exatos de saída de materiais para a parametrização de cotas e reposição inteligente de insumos.</p>
               <h4>2. O Problema Técnico</h4>
               <ul class="list">
-                <li>Produto cartesiano multiplicando valores indevidamente.</li>
-                <li>Documentos de 74 páginas com 90% de ruído (consumo zero).</li>
+                <li><strong>Dados Incorretos:</strong> Devido a um erro de Join (produto cartesiano), os valores de consumo eram multiplicados indevidamente, trazendo números irreais.</li>
+                <li><strong>Excesso de "Ruído":</strong> O relatório listava todos os itens do estoque, mesmo aqueles sem nenhuma movimentação no período, gerando documentos de 74 páginas (dos quais 90% eram consumo zero).</li>
+                <li><strong>Filtros Ineficientes:</strong> O parâmetro de data não respeitava a seleção do usuário, misturando meses diferentes. Além disso, as listas de seleção mostravam locais de estoque duplicados e de unidades hospitalares diferentes da que o usuário estava logado.</li>
+                <li><strong>Interface Confusa:</strong> O seletor de datas exibia formatos técnicos (ISO 8601) em vez do padrão brasileiro, dificultando a operação.</li>
               </ul>
               <h4>3. A Solução Aplicada</h4>
-              <p>Refatoração do SQL corrigindo ligações e aplicação de HAVING SUM(qt_consumo) > 0.</p>
+              <ul class="list">
+                <li><strong>Refatoração do SQL:</strong> Corrigi as ligações entre as tabelas de material, estrutura_material e movimento_estoque_v, garantindo a integridade dos cálculos.</li>
+                <li><strong>Otimização por Agrupamento:</strong> Apliquei a cláusula <code>HAVING SUM(qt_consumo) &gt; 0</code> para filtrar e remover automaticamente todos os itens que não tiveram consumo real no período.</li>
+                <li><strong>Inteligência de Unidade (Multi-unidade):</strong> Utilizei a variável nativa <code>:nr_estab_v</code> para filtrar dinamicamente as listas de Local de Estoque e Centro de Custo.</li>
+                <li><strong>Melhoria de UX/UI:</strong> Formatei os campos de busca usando <code>TO_CHAR</code> e <code>DISTINCT</code> para exibir listas limpas com datas em formato legível (MM/AAAA).</li>
+              </ul>
               <h4>4. O Impacto na Ponta</h4>
-              <p>Redução para 8 páginas úteis e precisão na reposição de medicamentos.</p>
+              <ul class="list">
+                <li><strong>Redução de Desperdício:</strong> O relatório passou de 74 páginas para apenas 8 páginas de dados úteis.</li>
+                <li><strong>Precisão Decisória:</strong> Com os valores corrigidos, a supervisão consegue parametrizar as cotas das farmácias satélites com base no consumo real, evitando falta ou excesso de medicamentos.</li>
+                <li><strong>Agilidade Operacional:</strong> A limpeza dos filtros reduziu o tempo de geração do relatório e eliminou erros de seleção entre unidades do grupo hospitalar.</li>
+              </ul>
             </div>
+            <footer class="project-full__tech">
+              <strong>🛠️ Tecnologias:</strong> Oracle SQL (PL/SQL), Tasy EMR, Módulo: Gerenciador de Relatórios / Suprimentos.
+            </footer>
           </article>
 
           <!-- PROJETO 3: REGRAS DE NEGÓCIO -->
@@ -404,6 +452,205 @@
               <h4>4. Impacto na Ponta</h4>
               <p>Redução de 60% no consumo de papel e agilidade total na beira-leito.</p>
             </div>
+          </article>
+
+          <!-- PROJETO 7: ETIQUETAS LACTÁRIO -->
+          <article class="card project-full">
+            <header>
+              <span class="tag tag--accent">Tasy EMR • Nutrição</span>
+              <h3>🏥 Customização de Etiquetas de Produção Nutricional (Lactário)</h3>
+            </header>
+            <div class="project-full__body">
+              <h4>1. O que é o projeto</h4>
+              <p>Desenvolvimento e ajuste de uma consulta SQL para a geração de etiquetas térmicas de identificação de dietas e fórmulas lácteas no módulo de Gestão da Nutrição (Lactário). A etiqueta consolida dados cruciais da prescrição médica, informações do paciente e orientações de preparo diretamente do banco de dados Oracle.</p>
+              <h4>2. O Problema Técnico</h4>
+              <ul class="list">
+                <li><strong>Poluição Visual:</strong> O campo DS_PROD concatenava o nome do item com a sua solubilidade/diluição, gerando excesso de texto em um espaço limitado na etiqueta.</li>
+                <li><strong>Redundância:</strong> A informação de diluição às vezes já constava em outros campos ou não era desejada naquela etapa específica da produção.</li>
+                <li><strong>Risco de Impressão:</strong> Necessidade de garantir que caracteres como <code>/</code> (para horários como 3/3h) e <code>:</code> (para validade) fossem impressos corretamente, sem que acentos ou caracteres invisíveis causassem falhas na comunicação com a impressora térmica (Zebra/Argox).</li>
+              </ul>
+              <h4>3. A Solução Aplicada</h4>
+              <ul class="list">
+                <li><strong>Refatoração da Query:</strong> Substituí a função específica do lactário pela função <code>TASY.OBTER_DESC_MATERIAL(B.CD_MATERIAL)</code>, isolando apenas o nome técnico do produto conforme cadastrado no sistema.</li>
+                <li><strong>Tratamento de Caracteres:</strong> Utilizei <code>TASY.ELIMINA_CARACTERE_ESP_ASC(texto, 'S', 'N')</code> — o parâmetro 'S' remove acentos (evitando caracteres estranhos na impressão), enquanto 'N' preserva símbolos essenciais como /, :, - e ().</li>
+                <li><strong>Lógica de Validade:</strong> Implementei uma cláusula <code>CASE WHEN</code> para calcular automaticamente o tempo de validade da fórmula com base na via de administração (VO - Via Oral vs. Outras), garantindo conformidade com os protocolos de segurança alimentar.</li>
+              </ul>
+              <h4>4. O Impacto na Ponta</h4>
+              <ul class="list">
+                <li><strong>Segurança do Paciente:</strong> Etiquetas mais limpas e legíveis reduzem drasticamente o risco de erros de administração pela equipe de enfermagem.</li>
+                <li><strong>Padronização:</strong> A informação apresentada na etiqueta passou a ser idêntica ao cadastro de materiais, eliminando confusões entre itens similares.</li>
+                <li><strong>Eficiência Operacional:</strong> A automatização dos cálculos de validade e o tratamento correto de caracteres evitam o retrabalho de impressão e o desperdício de insumos (etiquetas e ribbons).</li>
+              </ul>
+            </div>
+            <footer class="project-full__tech">
+              <strong>🛠️ Tecnologias:</strong> Oracle SQL, Tasy EMR (Philips) — Funções: LISTAGG, ELIMINA_CARACTERE_ESP_ASC, OBTER_DESC_MATERIAL, DECODE / CASE WHEN.
+            </footer>
+          </article>
+
+          <!-- PROJETO 8: ESCALA DE ALDRETE -->
+          <article class="card project-full">
+            <header>
+              <span class="tag tag--accent">Oracle SQL • Centro Cirúrgico</span>
+              <h3>📊 Otimização de Relatório Clínico: Escala de Aldrete (URPA)</h3>
+            </header>
+            <div class="project-full__body">
+              <h4>1. O que é o projeto?</h4>
+              <p>Reestruturação da extração de dados (SQL) de um relatório gerencial mensal para monitorar a evolução clínica dos pacientes na Unidade de Recuperação Pós-Anestésica (URPA). A Escala de Aldrete é um índice de enfermagem que avalia a prontidão do paciente para alta do Centro Cirúrgico.</p>
+              <h4>2. O Problema Técnico</h4>
+              <ul class="list">
+                <li><strong>Dados Fragmentados:</strong> Cada avaliação do paciente (1º tempo, 2º tempo, etc.) gerava uma linha nova no relatório, tornando a leitura exaustiva e gerando documentos muito extensos.</li>
+                <li><strong>Erro de Filtro Temporal:</strong> A consulta original possuía uma falha na lógica de data (<code>TRUNC</code>), resultando na exibição de dados apenas do dia 1º de cada mês, em vez de trazer o mês completo selecionado pelo usuário.</li>
+                <li><strong>Poluição de Dados:</strong> O relatório trazia procedimentos de obstetrícia/parto que não deveriam constar nesta visão específica da unidade.</li>
+              </ul>
+              <h4>3. A Solução Aplicada</h4>
+              <ul class="list">
+                <li><strong>CTE e Window Functions:</strong> Utilizei <code>ROW_NUMBER() OVER (PARTITION BY ... ORDER BY ...)</code> para ranquear as avaliações de cada paciente cronologicamente.</li>
+                <li><strong>Agregação Dinâmica com LISTAGG:</strong> Substituí a estrutura de múltiplas linhas pela função LISTAGG, concatenando todas as avaliações de pontos do paciente em uma única célula formatada (ex: "1º Tempo: 7 Pontos, 2º Tempo: 10 Pontos"). Cada paciente passou a ocupar apenas uma linha.</li>
+                <li><strong>Correção da Lógica de Data:</strong> Ajustei a cláusula WHERE utilizando <code>TRUNC(data, 'MM')</code>, garantindo que o parâmetro de mês trouxesse todos os dias daquele mês com precisão.</li>
+                <li><strong>Filtro de Negócio:</strong> Apliquei filtros de string (<code>NOT LIKE '%PARTO%'</code>) para limpar a base de dados de procedimentos indesejados no contexto do relatório.</li>
+              </ul>
+              <h4>4. O Impacto na Ponta</h4>
+              <ul class="list">
+                <li><strong>Economia de Tempo e Papel:</strong> Redução drástica no número de páginas, facilitando a conferência rápida pela coordenação de enfermagem.</li>
+                <li><strong>Evolução Clínica Visível:</strong> O profissional consegue ver a "escada" de melhora do paciente em uma única linha, agilizando a tomada de decisão sobre a alta.</li>
+                <li><strong>Confiabilidade dos Indicadores:</strong> Com a correção do filtro de data, o setor passou a ter dados reais sobre a produtividade do mês inteiro, eliminando o erro de subnotificação que existia anteriormente.</li>
+              </ul>
+            </div>
+            <footer class="project-full__tech">
+              <strong>🛠️ Tecnologias:</strong> Oracle Database, SQL (PL/SQL), Tasy EMR (Philips), Tasy Report Builder (Delphi).
+            </footer>
+          </article>
+
+          <!-- PROJETO 9: ETIQUETAS CME -->
+          <article class="card project-full">
+            <header>
+              <span class="tag tag--accent">Tasy EMR • CME</span>
+              <h3>🏥 Customização de Relatório de Etiquetas de Esterilização (CME)</h3>
+            </header>
+            <div class="project-full__body">
+              <h4>1. O que é o projeto</h4>
+              <p>Otimização e evolução do relatório 865 HMG (Etiqueta de Controle de Ciclos e Conjuntos) no módulo de CME (Central de Material e Esterilização) do sistema Tasy EMR. O objetivo foi transformar um relatório de impressão em lote em uma ferramenta híbrida que permite a impressão individualizada de itens.</p>
+              <h4>2. O Problema Técnico</h4>
+              <ul class="list">
+                <li><strong>Desperdício de Suprimentos:</strong> Se uma única etiqueta saísse com falha ou fosse perdida, o operador era forçado a reimprimir o lote inteiro do ciclo, desperdiçando etiquetas térmicas e ribbon.</li>
+                <li><strong>Falta de Identificação Única:</strong> O número de sequência individual do item no banco de dados (<code>NR_SEQUENCIA</code> da tabela CM_CONJUNTO_CONT) não estava disponível no layout para conferência visual rápida.</li>
+                <li><strong>Ambiguidade de IDs:</strong> O sistema utiliza um "Número de Ciclo" visível ao usuário, mas realiza a filtragem via "Sequência Interna" (ID), causando confusão na parametrização manual.</li>
+              </ul>
+              <h4>3. A Solução Aplicada</h4>
+              <ul class="list">
+                <li><strong>Lógica de Parâmetros Opcionais:</strong> Implementei uma cláusula WHERE dinâmica com NVL e operadores lógicos: <code>AND (:NR_SEQUENCIA_ITEM IS NULL OR :NR_SEQUENCIA_ITEM = 0 OR T.NR_SEQUENCIA = :NR_SEQUENCIA_ITEM)</code>. Se o parâmetro for deixado em branco, o banco ignora o filtro e traz todos os itens; se preenchido, isola apenas o item desejado.</li>
+                <li><strong>Enriquecimento de Dados:</strong> Adicionei a coluna <code>T.NR_SEQUENCIA</code> ao SELECT para disponibilizar o campo no editor de layout (FastReport), permitindo a impressão do ID único na etiqueta.</li>
+                <li><strong>Ajuste de Contexto:</strong> Corrigi a filtragem de ID interno para garantir compatibilidade com a chamada nativa do botão "Imprimir" da tela de Gestão de CME do Tasy.</li>
+              </ul>
+              <h4>4. O Impacto na Ponta</h4>
+              <ul class="list">
+                <li><strong>Economia de Insumos:</strong> Redução drástica no desperdício de etiquetas e ribbon ao permitir a reimpressão unitária.</li>
+                <li><strong>Agilidade Operacional:</strong> O setor de CME ganhou autonomia para corrigir falhas pontuais de etiquetagem sem interromper o fluxo de trabalho do ciclo completo.</li>
+                <li><strong>Rastreabilidade:</strong> A inclusão do número de sequência impresso facilitou a auditoria e a localização de itens específicos, aumentando a segurança do paciente no processo de esterilização.</li>
+              </ul>
+            </div>
+            <footer class="project-full__tech">
+              <strong>🛠️ Tecnologias:</strong> Oracle SQL / PL/SQL, Tasy EMR (Gestor de Relatórios), CME (Central de Material e Esterilização).
+            </footer>
+          </article>
+
+          <!-- PROJETO 10: AUDITORIA ORDENS DE COMPRA -->
+          <article class="card project-full">
+            <header>
+              <span class="tag tag--accent">Oracle SQL • Suprimentos</span>
+              <h3>📊 Relatório de Auditoria e Impacto de Ordens de Compra</h3>
+            </header>
+            <div class="project-full__body">
+              <h4>1. O que é o projeto</h4>
+              <p>Desenvolvimento de um Painel de Auditoria de Suprimentos dentro do sistema Tasy EMR (base Oracle). O objetivo foi criar uma ferramenta de gestão capaz de rastrear todas as Ordens de Compra (OCs) emitidas, identificando especificamente aquelas que sofreram alterações manuais após a emissão original. O relatório consolida dados de cabeçalho, itens de estoque, justificativas de alteração e totais por solicitante/motivo.</p>
+              <h4>2. O Problema Técnico</h4>
+              <ul class="list">
+                <li><strong>Lentidão Extrema:</strong> A consulta original tentava processar milhares de registros sem filtros eficientes, gerando "carregamento infinito" e relatórios com mais de 8.500 páginas.</li>
+                <li><strong>Conflitos de Agrupamento (Oracle):</strong> Ao tentar consolidar múltiplos motivos de solicitação em uma única linha de resumo, o banco retornava erros de agregação (ORA-00937 e ORA-00979).</li>
+                <li><strong>Layout e UX:</strong> Informações críticas como nome completo do usuário e status de edição saíam cortadas ou sobrepostas, dificultando a leitura rápida pelo gestor.</li>
+                <li><strong>Filtros Ineficientes:</strong> O uso incorreto do macro @sql_where fazia com que filtros avançados (por comprador ou fornecedor) ignorassem os totais do relatório.</li>
+              </ul>
+              <h4>3. A Solução Aplicada</h4>
+              <ul class="list">
+                <li><strong>Lógica de Detecção de Correção:</strong> Desenvolvi uma lógica em SQL comparando <code>DT_ORDEM_COMPRA</code> com <code>DT_ATUALIZACAO</code> (com margem de erro de 1 minuto) para isolar apenas as ordens que sofreram intervenção humana pós-geração.</li>
+                <li><strong>SQL Avançado (Nested LISTAGG):</strong> Desenvolvi subconsultas de três níveis utilizando LISTAGG combinada com MAX(). Isso permitiu gerar frases dinâmicas de resumo (ex: "Solicitante X - Motivo Y: Quant Z - Valor R$") sem quebrar as regras de agrupamento do banco.</li>
+                <li><strong>Integração de Tabelas:</strong> Realizei o cruzamento entre ORDEM_COMPRA, SOLIC_COMPRA e PESSOA_FISICA para converter logins de sistema em nomes completos e categorizar os 11 motivos obrigatórios de compra via DECODE.</li>
+                <li><strong>Otimização de Query:</strong> Reduzi os parâmetros de 31 para apenas 5 essenciais e substituí funções pesadas pela função nativa <code>tasy.obter_nome_usuario()</code>, garantindo alta performance.</li>
+              </ul>
+              <h4>4. O Impacto na Ponta</h4>
+              <ul class="list">
+                <li><strong>Mensuração de Retrabalho:</strong> O gestor passou a ter um indicador real de eficiência — identificamos que 65% das ordens do período sofreram alterações, sinalizando falhas no processo de cotação ou cadastro.</li>
+                <li><strong>Auditoria Rápida:</strong> Redução no tempo de análise de divergências no recebimento de materiais, pois o conferente sabe exatamente quem alterou a ordem e por quê.</li>
+                <li><strong>Agilidade do Sistema:</strong> O tempo de geração do relatório caiu de minutos (com risco de travamento) para poucos segundos, permitindo extrações diárias de controle.</li>
+                <li><strong>Tomada de Decisão:</strong> O resumo consolidado por solicitante permitiu à diretoria avaliar quais setores possuem o maior volume financeiro e de pedidos de alteração, otimizando o treinamento das equipes de compras.</li>
+              </ul>
+            </div>
+            <footer class="project-full__tech">
+              <strong>🛠️ Tecnologias:</strong> PL/SQL (Oracle), Tasy EMR (Gerenciador de Relatórios), Lógica de Banco de Dados Relacional: Subqueries, Joins, NVL, Decode, Case When.
+            </footer>
+          </article>
+
+          <!-- PROJETO 11: RASTREABILIDADE DE LOTE -->
+          <article class="card project-full">
+            <header>
+              <span class="tag tag--accent">Oracle SQL • Farmácia Clínica</span>
+              <h3>📊 Rastreabilidade de Lote em Prontuário Eletrônico</h3>
+            </header>
+            <div class="project-full__body">
+              <h4>1. O que é o projeto</h4>
+              <p>Desenvolvimento de uma camada de dados personalizada para o relatório de "Consumo de Materiais e Medicamentos por Atendimento" em ambiente hospitalar. O objetivo foi fornecer à assistência e à farmácia clínica um documento capaz de rastrear exatamente qual lote de medicamento foi administrado a cada paciente.</p>
+              <h4>2. O Problema Técnico</h4>
+              <p>O relatório original listava apenas as quantidades e os nomes dos materiais consumidos, omitindo informações críticas de rastreabilidade (Lote e Fornecedor). No banco de dados Oracle, essas informações residem em tabelas distintas da visão de movimento de estoque. Além disso, a ausência de tratamento para materiais que não possuem lote (como gazes ou seringas) resultava em um layout visualmente "quebrado", com lacunas brancas que geravam dúvidas nos usuários sobre a integridade dos dados.</p>
+              <h4>3. A Solução Aplicada</h4>
+              <ul class="list">
+                <li><strong>Arquitetura SQL:</strong> Reestruturação da query utilizando LEFT JOIN entre as views de movimentação (<code>movimento_estoque_v</code>) e as tabelas de cadastro de lotes (<code>material_lote_fornec</code>) e fornecedores (<code>pessoa_juridica</code>).</li>
+                <li><strong>Tratamento de Dados:</strong> Utilização de funções NVL, DECODE e concatenação para unificar a sequência interna do sistema com o dígito verificador e a descrição do fabricante.</li>
+                <li><strong>Sanitização de Saída:</strong> Implementação de lógica condicional para preencher campos nulos com a string "N/A", garantindo que materiais sem controle de lote fossem identificados corretamente em vez de deixarem campos vazios.</li>
+              </ul>
+              <h4>4. O Impacto na Ponta</h4>
+              <ul class="list">
+                <li><strong>Segurança do Paciente:</strong> Em caso de Recall de um lote específico pelo fabricante ou pela ANVISA, o hospital consegue identificar em segundos todos os pacientes que utilizaram aquele insumo.</li>
+                <li><strong>Conformidade:</strong> O relatório passou a atender às exigências de auditorias de qualidade e acreditações hospitalares (como ONA/JCI).</li>
+                <li><strong>Eficiência Operacional:</strong> Redução de chamados de suporte em 100% para este relatório, uma vez que a clareza visual (uso do N/A) eliminou as dúvidas de interpretação dos usuários.</li>
+              </ul>
+            </div>
+            <footer class="project-full__tech">
+              <strong>🛠️ Tecnologias:</strong> Oracle SQL, Tasy EMR, Relatórios Delphi/Tasy.
+            </footer>
+          </article>
+
+          <!-- PROJETO 12: PRESCRIÇÕES DE EXAMES -->
+          <article class="card project-full">
+            <header>
+              <span class="tag tag--accent">Oracle SQL • Laboratório</span>
+              <h3>🚀 Relatório Analítico de Prescrições de Exames por Setor</h3>
+            </header>
+            <div class="project-full__body">
+              <h4>1. O que é o projeto</h4>
+              <p>Desenvolvimento de um relatório analítico customizado para o sistema Tasy EMR (Philips), focado no monitoramento de pedidos de exames laboratoriais. O objetivo foi permitir que a gestão laboratorial e as unidades de internação tivessem uma visão clara de quais exames foram prescritos, por qual setor e para qual paciente, em um formato exportável para Excel.</p>
+              <h4>2. O Problema Técnico</h4>
+              <ul class="list">
+                <li><strong>Restrições do AppServer:</strong> O servidor de aplicação bloqueava o uso de SELECT * em subconsultas, abortando a operação por segurança.</li>
+                <li><strong>Limite de Volume de Dados:</strong> Ao transformar o relatório em analítico, o volume de dados ultrapassou o limite de segurança de 10.000 linhas configurado no servidor, gerando exceções de Java.</li>
+                <li><strong>Funções de Banco Inexistentes:</strong> Erros de identificador inválido (ORA-00904) ao tentar utilizar funções customizadas de nomes de pacientes que não estavam disponíveis naquela versão específica do banco.</li>
+              </ul>
+              <h4>3. A Solução Aplicada</h4>
+              <ul class="list">
+                <li><strong>Reescrita de Query:</strong> Substituí o uso de asteriscos por listas explícitas de colunas, satisfazendo as validações de segurança do sistema.</li>
+                <li><strong>Otimização com Funções Nativas:</strong> Implementei o uso da função <code>TASY.obter_nome_pf</code> para buscar nomes de pacientes via código de pessoa física, reduzindo a necessidade de JOINs pesados com tabelas de cadastro.</li>
+                <li><strong>Estruturação de Subqueries:</strong> Organizei a consulta em camadas para permitir que filtros dinâmicos (Setor, Data, Bancada) fossem injetados via alias de forma correta pelo Gerenciador de Relatórios.</li>
+                <li><strong>Mapeamento de Metadados:</strong> Reconfigurei manualmente todos os atributos e bandas no gerenciador do EMR para garantir que os novos campos analíticos fossem exportados corretamente para as colunas do Excel.</li>
+              </ul>
+              <h4>4. O Impacto na Ponta</h4>
+              <ul class="list">
+                <li><strong>Rastreabilidade Total:</strong> A equipe assistencial deixou de ver apenas "números" e passou a identificar exatamente qual paciente e qual prescrição compunham a demanda, eliminando erros de conferência manual.</li>
+                <li><strong>Gestão de Gargalos:</strong> O laboratório passou a identificar com precisão quais setores geravam maior volume de pedidos em horários de pico, permitindo o redimensionamento da equipe de coleta.</li>
+                <li><strong>Agilidade Operacional:</strong> O que antes exigia consultas manuais em diversas telas do prontuário eletrônico foi consolidado em um único clique, economizando tempo valioso da equipe de suporte e faturamento.</li>
+              </ul>
+            </div>
+            <footer class="project-full__tech">
+              <strong>🛠️ Tecnologias:</strong> Oracle SQL (PL/SQL), Tasy EMR (Philips), Gerenciador de Relatórios.
+            </footer>
           </article>
         </div>
       </div>
